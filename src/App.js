@@ -1,15 +1,9 @@
-import React, { useEffect } from 'react';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Lesson0 from './components/Lesson0';
 import Lesson1 from './components/Lesson1';
 
 function App() {
-  useEffect(() => {
-    const path = window.location.pathname;
-    if (path.startsWith('/labs/') && !window.location.hash) {
-      window.location.replace(`${window.location.href}#`);
-    }
-  }, []);
   return (
     <Router>
       <Switch>
